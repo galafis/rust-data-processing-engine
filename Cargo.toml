@@ -1,0 +1,63 @@
+[package]
+name = "rust-data-processing-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Gabriel Demetrios Lafis"]
+description = "A high-performance data processing engine written in Rust"
+license = "MIT"
+repository = "https://github.com/galafis/rust-data-processing-engine"
+readme = "README.md"
+keywords = ["data", "processing", "analytics", "etl", "pipeline"]
+categories = ["data-structures", "science"]
+
+[dependencies]
+# Core dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+csv = "1.1"
+chrono = "0.4"
+log = "0.4"
+thiserror = "1.0"
+anyhow = "1.0"
+num_cpus = "1.13"
+rand = "0.8"
+base64 = "0.13"
+
+# Optional dependencies for Parquet support
+arrow = { version = "9.0", optional = true }
+parquet = { version = "9.0", optional = true }
+
+# API dependencies
+actix-web = "4.0"
+actix-cors = "0.6"
+clap = "3.0"
+serde_yaml = "0.8"
+
+[features]
+default = []
+parquet = ["arrow", "parquet"]
+
+[dev-dependencies]
+tempfile = "3.3"
+criterion = "0.3"
+mockall = "0.11"
+tokio = { version = "1.0", features = ["full"] }
+
+[[bench]]
+name = "processing_benchmark"
+harness = false
+
+[[example]]
+name = "simple_pipeline"
+path = "examples/simple_pipeline.rs"
+
+[[example]]
+name = "api_server"
+path = "examples/api_server.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = 3
+
