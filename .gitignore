@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+Thumbs.db
+.env
+.vscode/
+.idea/
+*~
+*.tmp
+*.temp
