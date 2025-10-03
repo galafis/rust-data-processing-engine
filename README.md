@@ -1,4 +1,8 @@
-# 🇧🇷 Engine de Processamento de Dados | 🇺🇸 Engine de Processamento de Dados
+# 🖼️ Imagem Hero
+
+![Rust Data Processing Engine Hero Image](./hero_image.png)
+
+# 🇧🇷 Engine de Processamento de Dados | 🇺🇸 Data Processing Engine
 
 ## 🇧🇷 Português
 
@@ -28,7 +32,7 @@ cd rust-data-processing-engine
 ## 🇺🇸 English
 
 ### 📊 Description
-Engine de alta performance para processamento de dados
+High-performance data processing engine.
 
 ### 🛠️ Technologies Used
 Rust, Polars, Tokio, WebAssembly
@@ -55,3 +59,4 @@ MIT License
 
 ## 📞 Contato | Contact
 **GitHub**: [@galafis](https://github.com/galafis)
+
